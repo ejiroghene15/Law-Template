@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora:ital@0;1&display=swap");
 :root {
   --primary-color: #f77e46;
+  --ff-lora: "Lora", serif;
 }
 
 body {
   background-color: #ffffff;
+  margin: 0;
 }
 
 .btn-link {
@@ -44,7 +46,7 @@ main {
 .navbar .navlist li {
   position: relative;
   font-size: 16px;
-  font-family: "Lora", serif;
+  font-family: var(--ff-lora);
   display: inline-block;
   padding: 0 1.1em;
 }
@@ -99,7 +101,7 @@ main {
 }
 
 .info-section section {
-  font-family: "Lora", serif;
+  font-family: var(--ff-lora);
   position: relative;
   top: 50px;
   width: 55%;
@@ -267,7 +269,7 @@ main {
 
 .info-section:nth-child(4) aside .four-sections p {
   font-size: 16px;
-  font-family: "Lora", serif;
+  font-family: var(--ff-lora);
 }
 
 .info-section:nth-child(4) aside .four-sections:nth-child(1), .info-section:nth-child(4) aside .four-sections:nth-child(3) {
@@ -316,8 +318,241 @@ main {
 }
 
 .info-section:nth-child(5) section .card-grid .card p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   font-style: italic;
   text-align: center;
+}
+
+.info-section:nth-child(6) {
+  margin-top: 7em;
+  display: block;
+}
+
+.info-section:nth-child(6) section {
+  width: 100%;
+  top: 0px;
+}
+
+.info-section:nth-child(6) section h2 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2em;
+}
+
+.info-section:nth-child(6) section h2 > small {
+  font-size: 10px;
+}
+
+.info-section:nth-child(6) section .card-grid {
+  margin-top: 2.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.info-section:nth-child(6) section .card-grid .card {
+  background-color: #fef9f3;
+  border-radius: 30px;
+  padding: 3em;
+}
+
+.info-section:nth-child(6) section .card-grid .card p {
+  padding-top: 8px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.info-section:nth-child(6) section .card-grid .card h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #333333;
+}
+
+.info-section:nth-child(6) section .card-grid .card h3 small {
+  font-size: 16px;
+  margin-top: 8px;
+  font-family: var(--ff-lora);
+  display: block;
+  font-style: italic;
+}
+
+.info-section:nth-child(6) .indicators {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.info-section:nth-child(6) .indicators span {
+  height: 15px;
+  width: 15px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.info-section:nth-child(6) .indicators span.active {
+  opacity: 1;
+  background-color: var(--primary-color);
+}
+
+.info-section:nth-child(7) {
+  margin-top: 7em;
+  display: block;
+}
+
+.info-section:nth-child(7) section {
+  width: 100%;
+  top: 0px;
+}
+
+.info-section:nth-child(7) section h2 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2em;
+}
+
+.info-section:nth-child(7) section h2 > small {
+  font-size: 10px;
+}
+
+.info-section:nth-child(7) section .card-grid {
+  margin-top: 2.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr max-content 1fr;
+      grid-template-columns: 1fr -webkit-max-content 1fr;
+      grid-template-columns: 1fr max-content 1fr;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.info-section:nth-child(7) section .card-grid .card p {
+  font-size: 16px;
+  color: #333333;
+  line-height: 30px;
+  padding: 20px 0px;
+}
+
+.info-section:nth-child(7) section .card-grid .card .contact-info p {
+  padding: 0.1em 0em;
+}
+
+.info-section:nth-child(7) section .card-grid .card .contact-info p img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(1) {
+  padding: 0 2em;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(2), .info-section:nth-child(7) section .card-grid .card:nth-child(3) {
+  padding: 0 2em;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(2) h3, .info-section:nth-child(7) section .card-grid .card:nth-child(3) h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(2) ul, .info-section:nth-child(7) section .card-grid .card:nth-child(3) ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(2) ul li, .info-section:nth-child(7) section .card-grid .card:nth-child(3) ul li {
+  padding: 1em 0em;
+  color: #333333;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) {
+  padding: 0em 0.8em;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form {
+  padding: 1.5em 0em;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group {
+  margin-bottom: 1em;
+  color: #333333;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group label {
+  font-size: 16px;
+  display: block;
+  padding: 10px 0px;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control {
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.2em;
+  width: 100%;
+  outline: none !important;
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control::-webkit-input-placeholder {
+  color: #8f8f8f;
+  font-family: var(--ff-lora);
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control:-ms-input-placeholder {
+  color: #8f8f8f;
+  font-family: var(--ff-lora);
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control::-ms-input-placeholder {
+  color: #8f8f8f;
+  font-family: var(--ff-lora);
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control::placeholder {
+  color: #8f8f8f;
+  font-family: var(--ff-lora);
+}
+
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form button {
+  border: none !important;
+  padding: 1em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 1em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--primary-color);
+}
+
+footer p {
+  font-size: 16px;
+  color: white;
+  margin: 5px;
+  font-family: var(--ff-lora);
+}
+
+footer p:nth-child(2) {
+  margin-left: auto;
+}
+
+footer p:nth-child(2) img {
+  margin: 0px 1.5em;
 }

@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora:ital@0;1&display=swap");
 :root {
 	--primary-color: #f77e46;
+	--ff-lora: "Lora", serif;
 }
 
 body {
 	background-color: #ffffff;
+	margin: 0;
 }
 
 .btn-link {
@@ -36,7 +38,7 @@ main {
 		li {
 			position: relative;
 			font-size: 16px;
-			font-family: "Lora", serif;
+			font-family: var(--ff-lora);
 			display: inline-block;
 			padding: 0 1.1em;
 
@@ -87,7 +89,7 @@ main {
 	display: flex;
 	justify-content: space-between;
 	section {
-		font-family: "Lora", serif;
+		font-family: var(--ff-lora);
 		position: relative;
 		top: 50px;
 		width: 55%;
@@ -219,7 +221,7 @@ main {
 				}
 				p {
 					font-size: 16px;
-					font-family: "Lora", serif;
+					font-family: var(--ff-lora);
 				}
 				&:nth-child(1),
 				&:nth-child(3) {
@@ -260,13 +262,193 @@ main {
 						margin: 10px 0 0px;
 					}
 					p {
-						font-size: 14px;
+						font-size: 16px;
 						margin: 0;
 						font-style: italic;
 						text-align: center;
-
 					}
 				}
+			}
+		}
+	}
+
+	&:nth-child(6) {
+		margin-top: 7em;
+		display: block;
+		section {
+			width: 100%;
+			top: 0px;
+			h2 {
+				font-weight: 100;
+				text-align: center;
+				font-size: 2em;
+				> small {
+					font-size: 10px;
+				}
+			}
+			.card-grid {
+				margin-top: 2.5em;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				column-gap: 2em;
+				.card {
+					background-color: #fef9f3;
+					border-radius: 30px;
+					padding: 3em;
+					p {
+						padding-top: 8px;
+						font-size: 16px;
+						color: #333333;
+					}
+					h3 {
+						font-size: 22px;
+						font-weight: 400;
+						margin-bottom: 0;
+						color: #333333;
+						small {
+							font-size: 16px;
+							margin-top: 8px;
+							font-family: var(--ff-lora);
+							display: block;
+							font-style: italic;
+						}
+					}
+				}
+			}
+		}
+		.indicators {
+			text-align: center;
+			padding-top: 20px;
+			span {
+				height: 15px;
+				width: 15px;
+				background-color: #e2e2e2;
+				border-radius: 50%;
+				display: inline-block;
+				margin: 0 6px;
+				&.active {
+					opacity: 1;
+					background-color: var(--primary-color);
+				}
+			}
+		}
+	}
+
+	&:nth-child(7) {
+		margin-top: 7em;
+		display: block;
+		section {
+			width: 100%;
+			top: 0px;
+			h2 {
+				font-weight: 100;
+				text-align: center;
+				font-size: 2em;
+				> small {
+					font-size: 10px;
+				}
+			}
+			.card-grid {
+				margin-top: 2.5em;
+				display: grid;
+				grid-template-columns: 1fr max-content 1fr;
+				column-gap: 2em;
+				.card {
+					p {
+						font-size: 16px;
+						color: #333333;
+						line-height: 30px;
+						padding: 20px 0px;
+					}
+					.contact-info {
+						p {
+							padding: 0.1em 0em;
+							img {
+								vertical-align: middle;
+								margin-right: 8px;
+							}
+						}
+					}
+
+					&:nth-child(1) {
+						padding: 0 2em;
+					}
+
+					&:nth-child(2),
+					&:nth-child(3) {
+						padding: 0 2em;
+						h3 {
+							margin: 0;
+							font-weight: 400;
+							font-size: 22px;
+						}
+						ul {
+							list-style: none;
+							padding: 0;
+							li {
+								padding: 1em 0em;
+								color: #333333;
+							}
+						}
+					}
+
+					&:nth-child(3) {
+						padding: 0em 0.8em;
+						form {
+							padding: 1.5em 0em;
+							.form-group {
+								margin-bottom: 1em;
+								color: #333333;
+								label {
+									font-size: 16px;
+									display: block;
+									padding: 10px 0px;
+								}
+								.form-control {
+									font-size: 16px;
+									box-sizing: border-box;
+									padding: 1.2em;
+									width: 100%;
+									outline: none !important;
+									border: 1px solid #8f8f8f;
+									border-radius: 10px;
+									&::placeholder {
+										color: #8f8f8f;
+										font-family: var(--ff-lora);
+									}
+								}
+							}
+							button {
+								border: none !important;
+								padding: 1em 2em;
+								background-color: var(--primary-color);
+								color: white;
+								cursor: pointer;
+								border-radius: 4px;
+								text-transform: uppercase;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	padding: 1em 5em;
+	display: flex;
+	align-items: center;
+	background-color: var(--primary-color);
+	p {
+		font-size: 16px;
+		color: white;
+		margin: 5px;
+		font-family: var(--ff-lora);
+		&:nth-child(2) {
+			margin-left: auto;
+			img {
+				margin: 0px 1.5em;
 			}
 		}
 	}
