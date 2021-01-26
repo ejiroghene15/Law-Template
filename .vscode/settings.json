@@ -7,5 +7,8 @@
       "savePath": "/css/"
     }
   ],
-  "liveSassCompile.settings.generateMap": false
+  "liveSassCompile.settings.generateMap": false,
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "compile-hero.sass-output-directory": "./css",
+  "compile-hero.scss-output-directory": "./css"
 }
