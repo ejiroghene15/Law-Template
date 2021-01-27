@@ -36,6 +36,16 @@ main {
 .navbar {
 	display: flex;
 	align-items: center;
+
+	.mobile-menu {
+		display: none;
+		@include mq(900px) {
+			display: block;
+			margin-left: auto;
+			cursor: pointer;
+		}
+	}
+
 	.navlist {
 		list-style: none;
 		padding: 0;
