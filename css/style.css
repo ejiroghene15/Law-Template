@@ -22,6 +22,64 @@ body {
   font-family: "Baskervville", serif;
 }
 
+#mobile-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+#mobile-menu.visible {
+  visibility: visible;
+}
+#mobile-menu.visible .navlist-mobile {
+  opacity: 1;
+  transform: translateY(0);
+}
+#mobile-menu::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+#mobile-menu .navlist-mobile {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(20px);
+  background-color: #fef9f3;
+  box-shadow: 0px 2px 6px #3e1d0e1c;
+  border-radius: 5px;
+  width: 45vmax;
+  padding: 0;
+  list-style: none;
+  z-index: 4;
+  position: relative;
+}
+#mobile-menu .navlist-mobile > li {
+  padding: 1.2em;
+  color: #f77e46;
+}
+#mobile-menu .close-menu {
+  content: "x";
+  background-color: #fef9f3;
+  box-shadow: inset -5px 5px 5px 0px #3e1d0e1c;
+  color: #f77e46;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  right: -10px;
+  top: -12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
 header,
 main {
   padding: 7vh 5vw;
@@ -31,11 +89,11 @@ main {
   display: flex;
   align-items: center;
 }
-.navbar .mobile-menu {
+.navbar .mobile-menu-hamburger {
   display: none;
 }
 @media screen and (max-width: 900px) {
-  .navbar .mobile-menu {
+  .navbar .mobile-menu-hamburger {
     display: block;
     margin-left: auto;
     cursor: pointer;
@@ -449,6 +507,7 @@ main {
 }
 .info-section:nth-child(7) section .card-grid .card .contact-info p {
   padding: 0.1em 0em;
+  white-space: nowrap;
 }
 .info-section:nth-child(7) section .card-grid .card .contact-info p img {
   vertical-align: middle;
@@ -458,7 +517,12 @@ main {
   padding: 0 1em;
 }
 .info-section:nth-child(7) section .card-grid .card:nth-child(2), .info-section:nth-child(7) section .card-grid .card:nth-child(3) {
-  padding: 0 2em;
+  padding: 0 7vw;
+}
+@media screen and (max-width: 768px) {
+  .info-section:nth-child(7) section .card-grid .card:nth-child(2), .info-section:nth-child(7) section .card-grid .card:nth-child(3) {
+    padding: 0 1em;
+  }
 }
 .info-section:nth-child(7) section .card-grid .card:nth-child(2) h3, .info-section:nth-child(7) section .card-grid .card:nth-child(3) h3 {
   margin: 0;

@@ -28,6 +28,67 @@ body {
 	font-family: "Baskervville", serif;
 }
 
+#mobile-menu {
+	&.visible {
+		visibility: visible;
+
+		.navlist-mobile {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	visibility: hidden;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+	&::before {
+		content: "";
+		height: 100%;
+		width: 100%;
+		position: fixed;
+	}
+
+	.navlist-mobile {
+		opacity: 0;
+		transition: 0.5s;
+		transform: translateY(20px);
+		background-color: #fef9f3;
+		box-shadow: 0px 2px 6px #3e1d0e1c;
+		border-radius: 5px;
+		width: 45vmax;
+		padding: 0;
+		list-style: none;
+		z-index: 4;
+		position: relative;
+
+		> li {
+			padding: 1.2em;
+			color: #f77e46;
+		}
+	}
+	.close-menu {
+		content: "x";
+		background-color: #fef9f3;
+		box-shadow: inset -5px 5px 5px 0px #3e1d0e1c;
+		color: #f77e46;
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		right: -10px;
+		top: -12px;
+		cursor: pointer;
+		z-index: 10;
+	}
+}
+
 header,
 main {
 	padding: 7vh 5vw;
@@ -37,7 +98,7 @@ main {
 	display: flex;
 	align-items: center;
 
-	.mobile-menu {
+	.mobile-menu-hamburger {
 		display: none;
 		@include mq(900px) {
 			display: block;
@@ -461,6 +522,7 @@ main {
 					.contact-info {
 						p {
 							padding: 0.1em 0em;
+							white-space: nowrap;
 							img {
 								vertical-align: middle;
 								margin-right: 8px;
@@ -474,7 +536,10 @@ main {
 
 					&:nth-child(2),
 					&:nth-child(3) {
-						padding: 0 2em;
+						padding: 0 7vw;
+						@include mq(768px) {
+							padding: 0 1em;
+						}
 						h3 {
 							margin: 0;
 							font-weight: 400;

@@ -8,19 +8,31 @@
 	</head>
 
 	<body>
+		<section id="mobile-menu">
+			<ul class="navlist-mobile">
+				<span class="close-menu">x</span>
+
+				<li>Home</li>
+				<li>About us</li>
+				<li>Services</li>
+				<li>Our team</li>
+				<li>Contact Us</li>
+			</ul>
+		</section>
+
 		<header>
 			<nav class="navbar">
 				<section id="logo">
 					<img src="./imgs/logo.svg" alt="" />
 				</section>
-				<ul class="navlist" >
+				<ul class="navlist">
 					<li class="active">Home</li>
 					<li>About us</li>
 					<li>Services</li>
 					<li>Our team</li>
 					<li class="btn-link primary">Contact Us</li>
 				</ul>
-				<section class="mobile-menu">
+				<section class="mobile-menu-hamburger">
 					<img src="./imgs/hamburger.svg" alt="" />
 				</section>
 			</nav>
@@ -289,5 +301,21 @@
 				<img src="./imgs/twitter-logo.svg" alt="" />
 			</p>
 		</footer>
+
+		<script>
+			let mobile_menu = document.querySelector("#mobile-menu");
+
+			document
+				.querySelector(".mobile-menu-hamburger")
+				.addEventListener("click", function () {
+					mobile_menu.classList.toggle("visible");
+				});
+
+			document
+				.querySelector(".close-menu")
+				.addEventListener("click", function (e) {
+					mobile_menu.classList.remove("visible");
+				});
+		</script>
 	</body>
 </html>
