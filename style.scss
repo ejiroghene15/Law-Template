@@ -29,12 +29,13 @@ body {
 }
 
 #mobile-menu {
-	&.visible {
-		visibility: visible;
-
-		.navlist-mobile {
-			opacity: 1;
-			transform: translateY(0);
+	@include mq(900px) {
+		&.visible {
+			visibility: visible;
+			.navlist-mobile {
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 	}
 	position: fixed;
@@ -59,7 +60,10 @@ body {
 		background-color: #fef9f3;
 		box-shadow: 0px 2px 6px #3e1d0e1c;
 		border-radius: 5px;
-		width: 45vmax;
+		width: 40vw;
+		@include mq(768px) {
+			width: 45vmax;
+		}
 		padding: 0;
 		list-style: none;
 		z-index: 4;
@@ -68,10 +72,36 @@ body {
 		> li {
 			padding: 1.2em;
 			color: #f77e46;
+			.menu-icon {
+				width: 25px;
+				display: inline-block;
+				opacity: 0;
+				transition: 0.5s;
+				i.fa {
+					transition: 0.5s;
+				}
+				&.active {
+					opacity: 1;
+					i.fa {
+						transform: rotate(90deg);
+					}
+				}
+			}
+			&:hover {
+				cursor: pointer;
+				.menu-icon {
+					opacity: 1;
+					i.fa {
+						transform: rotate(90deg);
+					}
+				}
+			}
+			&:nth-child(odd) {
+				background-color: #fff;
+			}
 		}
 	}
 	.close-menu {
-		content: "x";
 		background-color: #fef9f3;
 		box-shadow: inset -5px 5px 5px 0px #3e1d0e1c;
 		color: #f77e46;
@@ -86,6 +116,9 @@ body {
 		top: -12px;
 		cursor: pointer;
 		z-index: 10;
+		i.bx {
+			font-size: 1.3em;
+		}
 	}
 }
 
