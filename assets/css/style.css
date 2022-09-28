@@ -52,7 +52,7 @@ body {
   transition: 0.5s;
   transform: translateY(20px);
   background-color: #fef9f3;
-  box-shadow: 0px 2px 6px #3e1d0e1c;
+  box-shadow: 0px 2px 6px rgba(62, 29, 14, 0.1098039216);
   border-radius: 5px;
   width: 40vw;
   padding: 0;
@@ -98,7 +98,7 @@ body {
 }
 #mobile-menu .close-menu {
   background-color: #fef9f3;
-  box-shadow: inset -5px 5px 5px 0px #3e1d0e1c;
+  box-shadow: inset -5px 5px 5px 0px rgba(62, 29, 14, 0.1098039216);
   color: #f77e46;
   height: 35px;
   width: 35px;
@@ -151,6 +151,10 @@ main {
   font-family: var(--ff-lora);
   display: inline-block;
   padding: 0 1.1em;
+}
+.navbar .navlist li > a {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 0.721);
 }
 .navbar .navlist li:last-of-type {
   padding-right: 0;
@@ -527,6 +531,7 @@ main {
 .info-section:nth-child(7) section .card-grid {
   margin-top: 2.5em;
   display: grid;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
   grid-template-columns: 1fr max-content 1fr;
   row-gap: 2em;
 }
@@ -569,9 +574,11 @@ main {
   list-style: none;
   padding: 0;
 }
-.info-section:nth-child(7) section .card-grid .card:nth-child(2) ul li, .info-section:nth-child(7) section .card-grid .card:nth-child(3) ul li {
+.info-section:nth-child(7) section .card-grid .card:nth-child(2) ul li > a, .info-section:nth-child(7) section .card-grid .card:nth-child(3) ul li > a {
+  text-decoration: none !important;
   padding: 1em 0em;
   color: #333333;
+  font-size: 16px;
 }
 .info-section:nth-child(7) section .card-grid .card:nth-child(3) {
   padding: 0em 0.8em;
@@ -596,6 +603,14 @@ main {
   outline: none !important;
   border: 1px solid #8f8f8f;
   border-radius: 10px;
+}
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control::-moz-placeholder {
+  color: #8f8f8f;
+  font-family: var(--ff-lora);
+}
+.info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control:-ms-input-placeholder {
+  color: #8f8f8f;
+  font-family: var(--ff-lora);
 }
 .info-section:nth-child(7) section .card-grid .card:nth-child(3) form .form-group .form-control::placeholder {
   color: #8f8f8f;
