@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Metalex Legal</title>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="https://use.fontawesome.com/b8703add6e.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -290,20 +291,20 @@
 
 					<div class="card">
 						<h3 class="headings">Get in touch</h3>
-						<form>
+						<form id="contact_form" method="POST">
 							<section class="form-group">
 								<label for="">Name</label>
-								<input type="text" class="form-control" placeholder="Enter full name" />
+								<input type="text" name="name" class="form-control" placeholder="Enter full name" />
 							</section>
 							<section class="form-group">
 								<label for="">Email address</label>
-								<input type="text" class="form-control" placeholder="Enter email address" />
+								<input type="text" name="email" class="form-control" placeholder="Enter email address" />
 							</section>
 							<section class="form-group">
 								<label for="">Message</label>
-								<textarea rows="7" class="form-control" placeholder="Type your message"></textarea>
+								<textarea rows="7" name="message" class="form-control" placeholder="Type your message"></textarea>
 							</section>
-							<button>Submit</button>
+							<button type="submit"> Submit </button>
 						</form>
 					</div>
 				</div>
@@ -319,7 +320,9 @@
 			<img src="./imgs/twitter-logo.svg" alt="twitter" />
 		</p>
 	</footer>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="./assets/js/app.js"></script>
 </body>
 

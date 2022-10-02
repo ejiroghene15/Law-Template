@@ -1,17 +1,6 @@
 $(document).ready(function () {
 	let mobile_menu = document.querySelector("#mobile-menu");
-
-	document
-		.querySelector(".mobile-menu-hamburger")
-		.addEventListener("click", function () {
-			mobile_menu.classList.toggle("visible");
-		});
-
-	document.querySelector(".close-menu").addEventListener("click", function (e) {
-		mobile_menu.classList.remove("visible");
-	});
-
-	// Add smooth scrolling to all links
+	// * Add smooth scrolling to all links
 	$("a").on("click", function (event) {
 		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
@@ -30,5 +19,62 @@ $(document).ready(function () {
 				800
 			);
 		} // End if
+	});
+
+	// * Toggle the mobile menu icon
+	document
+		.querySelector(".mobile-menu-hamburger")
+		.addEventListener("click", function () {
+			mobile_menu.classList.toggle("visible");
+		});
+
+	document.querySelector(".close-menu").addEventListener("click", function (e) {
+		mobile_menu.classList.remove("visible");
+	});
+
+	// * Submit contact message
+	$("#contact_form").submit(function (e) {
+		e.preventDefault();
+		let form_data = $(this).serializeArray();
+		let check_data = form_data.filter((data) => data.value.trim() !== "");
+		if (check_data.length !== form_data.length) {
+			return swal({
+				text: "All fields are required",
+				icon: "error",
+			});
+		}
+
+		//? Show the Lottie icon showing mail in progress
+		swal({
+			title: "Sending Message",
+			button: false,
+			content: {
+				element: "lottie-player",
+				attributes: {
+					src: "https://assets7.lottiefiles.com/packages/lf20_78obvmke.json",
+					loop: true,
+					autoplay: true,
+					background: "transparent",
+					style: "height: 200px",
+				},
+			},
+		});
+
+		$.post("./ajax/contact_us.php", form_data).then((res) => {
+			res = JSON.parse(res);
+			setTimeout(() => {
+				if (res.status == 1) {
+					contact_form.reset();
+					return swal({
+						text: `${res.message}`,
+						icon: "success",
+					});
+				}
+				return swal({
+					text: `${res.message}`,
+					icon: "error",
+				});
+			}, 3000);
+		});
 	});
 });
