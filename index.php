@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Metalex Legal</title>
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	<script src="https://use.fontawesome.com/b8703add6e.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -73,13 +73,12 @@
 		<div id="intro" class="info-section">
 			<section>
 				<h2 class="headings">
-					A firm that backs you up with efficiency and great results
+					A New Age Innovative Law Firm
 				</h2>
 				<p>
-					Irure magna officia pariatur irure aliqua officia quis voluptate
-					nisi mollit laborum tempor.
+					We Diligently back and protect you from the future and meet your legal needs with sheer efficiency in delivering the best possible results.
 				</p>
-				<a href="#" class="btn-link primary">CONTACT US</a>
+				<a href="#more-info" class="btn-link primary">CONTACT US</a>
 			</section>
 			<aside>
 				<img src="./imgs/img1.png" alt="" class="intro_img" />
@@ -90,15 +89,14 @@
 			<section>
 				<h2 class="headings">
 					<small>ABOUT US</small> <br />
-					Here to serve
+					Why Metalex Legal Is Right For You
 				</h2>
 				<p>
-					Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-					pariatur sit qui ut. Laborum est ad aliquip anim qui. Nisi magna
-					exercitation adipisicing reprehenderit exercitation sit veniam
-					deserunt eiusmod amet incididunt qui. Excepteur quis cillum commodo
-					minim ut nisi quis pariatur cillum tempor eiusmod. Officia dolor
-					magna ut ex duis mollit occaecat ullamco proident.
+					Metalex Legal provides expert legal advice in technology and corporate matters for individuals, startups, existing SMEs in the process scaling and big corporations.
+				</p>
+				<p>
+					We work at an international level and offer full legal support to companies setting up in Nigeria.
+					Our expertise cuts across but not limited to a full range of technology and corporate matters from transfer of technology and intellectual property to incorporation, mergers, acquisitions, investment, shareholders’ agreements, buybacks, capital reductions, complex group reorganization, commercial contract reviews and dispute resolution.
 				</p>
 			</section>
 			<aside>
@@ -115,30 +113,58 @@
 				<div class="card-grid">
 					<div class="card">
 						<img src="./imgs/fin-law.svg" alt="" />
-						<h3 class="headings">Finance Law</h3>
-						<p>
-							Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-							pariatur sit qui. Laborum est ad aliquip anim qui.
-						</p>
+						<h3 class="headings">Business Mitigation & Mediation</h3>
+						<p><i class="bi bi-dash-lg"></i> Intellectual Property right litigation </p>
+						<p><i class="bi bi-dash-lg"></i> Contractual and Commercial Dispute </p>
+						<p><i class="bi bi-dash-lg"></i> Corporate Law Dispute </p>
+						<p><i class="bi bi-dash-lg"></i> Bankers Liability </p>
 					</div>
 
 					<div class="card">
 						<img src="./imgs/cm-law.svg" alt="" />
-						<h3 class="headings">Criminal Law</h3>
-						<p>
-							Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-							pariatur sit qui. Laborum est ad aliquip anim qui.
-						</p>
+						<h3 class="headings">Information Technology</h3>
+						<p><i class="bi bi-dash-lg"></i> Protection of a company’s e-reputation </p>
+						<p><i class="bi bi-dash-lg"></i> Information Technology Contracts </p>
+						<p><i class="bi bi-dash-lg"></i> Information Technology Charter </p>
+						<p><i class="bi bi-dash-lg"></i> Data Privacy </p>
 					</div>
 
 					<div class="card">
 						<img src="./imgs/fm-law.svg" alt="" />
-						<h3 class="headings">Family Law</h3>
-						<p>
-							Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-							pariatur sit qui. Laborum est ad aliquip anim qui.
-						</p>
+						<h3 class="headings">Funding, Mergers & Acquisition</h3>
+						<p><i class="bi bi-dash-lg"></i> Acquisition or sale of company shares </p>
+						<p><i class="bi bi-dash-lg"></i> Acquisition or sale of business </p>
+						<p><i class="bi bi-dash-lg"></i> Family business transmission </p>
+						<p><i class="bi bi-dash-lg"></i> Fundraising and capital investment </p>
 					</div>
+
+					<div class="card">
+						<img src="./imgs/fm-law.svg" alt="" />
+						<h3 class="headings">Corporate Law</h3>
+						<p><i class="bi bi-dash-lg"></i> Joint Venture Structuring </p>
+						<p><i class="bi bi-dash-lg"></i> Corporate Regulatory Compliance </p>
+						<p><i class="bi bi-dash-lg"></i> Shareholder dispute litigation and resolution </p>
+						<p><i class="bi bi-dash-lg"></i> Pre-incorporation and general post-incorporation matters</p>
+					</div>
+
+					<div class="card">
+						<img src="./imgs/fm-law.svg" alt="" />
+						<h3 class="headings">Intellectual Property</h3>
+						<p><i class="bi bi-dash-lg"></i> Copyright </p>
+						<p><i class="bi bi-dash-lg"></i> Intellectual Property right protection</p>
+						<p><i class="bi bi-dash-lg"></i> Trademark renewing and objection in Nigeria </p>
+						<p><i class="bi bi-dash-lg"></i> Trademark clearance search and registration in Nigeria </p>
+					</div>
+
+					<div class="card">
+						<img src="./imgs/fm-law.svg" alt="" />
+						<h3 class="headings">Investing In Nigeria</h3>
+						<p><i class="bi bi-dash-lg"></i> Foreign company set up in Nigeria </p>
+						<p><i class="bi bi-dash-lg"></i> Joint Venture in Nigeria </p>
+						<p><i class="bi bi-dash-lg"></i> Business immigration </p>
+						<p><i class="bi bi-dash-lg"></i> Trade office set up </p>
+					</div>
+
 				</div>
 			</section>
 		</div>
@@ -155,7 +181,7 @@
 					exercitation adipisicing reprehenderit exercitation sit veniam
 					deserunt
 				</p>
-				<a href="">Request a free consultation</a>
+				<a href="#more-info">Request a free consultation</a>
 			</section>
 			<aside>
 				<div class="four-sections">
@@ -320,7 +346,21 @@
 			<img src="./imgs/twitter-logo.svg" alt="twitter" />
 		</p>
 	</footer>
-
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {},
+			Tawk_LoadStart = new Date();
+		(function() {
+			var s1 = document.createElement("script"),
+				s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/633af0fa37898912e96ca040/1gef3qll6';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="./assets/js/app.js"></script>

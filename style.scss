@@ -125,11 +125,14 @@ body {
 header,
 main {
 	padding: 7vh 5vw;
+	position: relative;
 }
 
 .navbar {
 	display: flex;
 	align-items: center;
+	position: sticky;
+	top: 30px;
 
 	.mobile-menu-hamburger {
 		display: none;
@@ -209,6 +212,7 @@ main {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 3em;
+	margin-top: 10em;
 	section {
 		flex: 1 1 55%;
 		font-family: var(--ff-lora);
@@ -267,8 +271,11 @@ main {
 		}
 	}
 
-	&:nth-child(2) {
-		margin-top: 7em;
+	&#intro {
+		margin-top: 0;
+	}
+	
+	&#about-us {
 		flex-direction: row-reverse;
 		gap: 10vw;
 
@@ -298,8 +305,7 @@ main {
 		}
 	}
 
-	&:nth-child(3) {
-		margin-top: 7em;
+	&#area-of-practice {
 		display: block;
 		section {
 			width: 100%;
@@ -323,17 +329,19 @@ main {
 				.card {
 					background-color: #fef9f3;
 					border-radius: 30px;
-					padding: 3em;
+					padding: 2em 1.5em;
 					img {
 						max-height: 40px;
 					}
 					h3 {
-						font-weight: 100;
+						font-weight: 600;
 						font-size: 20px;
 					}
 					p {
+						display: flex;
+						gap: 0.5em;
 						line-height: 30px;
-						font-size: 16px;
+						font-size: 14px;
 						margin: 0;
 					}
 				}
@@ -341,8 +349,7 @@ main {
 		}
 	}
 
-	&:nth-child(4) {
-		margin-top: 7em;
+	&#case-results {
 		section {
 			top: 0px;
 			h2 {
@@ -402,8 +409,7 @@ main {
 		}
 	}
 
-	&:nth-child(5) {
-		margin-top: 7em;
+	&#our-team {
 		display: block;
 		section {
 			width: 100%;
@@ -463,8 +469,7 @@ main {
 		}
 	}
 
-	&:nth-child(6) {
-		margin-top: 7em;
+	&#testimonial {
 		display: block;
 		section {
 			width: 100%;
@@ -529,8 +534,7 @@ main {
 		}
 	}
 
-	&:nth-child(7) {
-		margin-top: 7em;
+	&#more-info {
 		section {
 			width: 100%;
 			top: 0px;
