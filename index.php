@@ -181,7 +181,7 @@
 					exercitation adipisicing reprehenderit exercitation sit veniam
 					deserunt
 				</p>
-				<a href="#more-info">Request a free consultation</a>
+				<a href="#more-info">Send us a Message</a>
 			</section>
 			<aside>
 				<div class="four-sections">
@@ -214,25 +214,33 @@
 				</h2>
 				<div class="card-grid">
 					<div class="card">
-						<img src="./imgs/co-founder.png" alt="" />
-						<h5 class="headings">Gretel Smith</h5>
-						<p>Co-Founder</p>
+						<figure>
+							<img src="./imgs/team/akpos.jpg" alt="" />
+						</figure>
+						<h5 class="headings">Kohwo Akpofure</h5>
+						<p>Founder</p>
 					</div>
 
 					<div class="card">
-						<img src="./imgs/paralegal.png" alt="" />
-						<h5 class="headings">Laila Strong</h5>
-						<p>Paralegal</p>
+						<figure>
+							<img src="./imgs/team/partner_2.jpg" alt="" />
+						</figure>
+						<h5 class="headings">Orobosa Ebowe</h5>
+						<p>Senior Partner</p>
 					</div>
 
-					<div class="card">
-						<img src="./imgs/partner.png" alt="" />
+					<div class="card" hidden>
+						<figure>
+							<img src="./imgs/partner.png" alt="" />
+						</figure>
 						<h5 class="headings">Samson Range</h5>
 						<p>Partner</p>
 					</div>
 
-					<div class="card">
-						<img src="./imgs/secretary.png" alt="" />
+					<div class="card" hidden>
+						<figure>
+							<img src="./imgs/secretary.png" alt="" />
+						</figure>
 						<h5 class="headings">Keri Powell</h5>
 						<p>Secretary</p>
 					</div>
@@ -346,20 +354,7 @@
 			<img src="./imgs/twitter-logo.svg" alt="twitter" />
 		</p>
 	</footer>
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-		var Tawk_API = Tawk_API || {},
-			Tawk_LoadStart = new Date();
-		(function() {
-			var s1 = document.createElement("script"),
-				s0 = document.getElementsByTagName("script")[0];
-			s1.async = true;
-			s1.src = 'https://embed.tawk.to/633af0fa37898912e96ca040/1gef3qll6';
-			s1.charset = 'UTF-8';
-			s1.setAttribute('crossorigin', '*');
-			s0.parentNode.insertBefore(s1, s0);
-		})();
-	</script>
+	<script src="//code.tidio.co/cec3szootznfia799pjladphh8dnncae.js" async></script>
 	<!--End of Tawk.to Script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
