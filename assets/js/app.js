@@ -32,6 +32,14 @@ $(document).ready(function () {
 		mobile_menu.classList.remove("visible");
 	});
 
+	$(".carousel-check").click(function () {
+		let index = $(".carousel-check").index(this);
+		let calc = +index * 100;
+		$("._carousel").animate({
+			left: `-${calc}%`,
+		});
+	});
+
 	// * Submit contact message
 	$("#contact_form").submit(function (e) {
 		e.preventDefault();

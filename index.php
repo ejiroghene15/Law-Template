@@ -89,7 +89,7 @@
 			<section>
 				<h2 class="headings">
 					<small>ABOUT US</small> <br />
-					Why Metalex Legal Is Right For You
+					<span>Why Metalex Legal Is Right For You</span>
 				</h2>
 				<p>
 					Metalex Legal provides expert legal advice in technology and corporate matters for individuals, startups, existing SMEs in the process scaling and big corporations.
@@ -108,62 +108,53 @@
 			<section>
 				<h2>
 					<small>SERVICES</small> <br />
-					Areas of Practice
+					<span>Areas of Practice</span>
 				</h2>
 				<div class="card-grid">
-					<div class="card">
-						<img src="./imgs/fin-law.svg" alt="" />
-						<h3 class="headings">Business Mitigation & Mediation</h3>
-						<p><i class="bi bi-dash-lg"></i> Intellectual Property right litigation </p>
-						<p><i class="bi bi-dash-lg"></i> Contractual and Commercial Dispute </p>
-						<p><i class="bi bi-dash-lg"></i> Corporate Law Dispute </p>
-						<p><i class="bi bi-dash-lg"></i> Bankers Liability </p>
-					</div>
+					<a href="" class="card">
+						<img src="./imgs/c_law.png" alt="" />
+						<h3 class="headings">Corporate Law Practice</h3>
+					</a>
 
-					<div class="card">
-						<img src="./imgs/cm-law.svg" alt="" />
-						<h3 class="headings">Information Technology</h3>
-						<p><i class="bi bi-dash-lg"></i> Protection of a company’s e-reputation </p>
-						<p><i class="bi bi-dash-lg"></i> Information Technology Contracts </p>
-						<p><i class="bi bi-dash-lg"></i> Information Technology Charter </p>
-						<p><i class="bi bi-dash-lg"></i> Data Privacy </p>
-					</div>
-
-					<div class="card">
-						<img src="./imgs/fm-law.svg" alt="" />
-						<h3 class="headings">Funding, Mergers & Acquisition</h3>
-						<p><i class="bi bi-dash-lg"></i> Acquisition or sale of company shares </p>
-						<p><i class="bi bi-dash-lg"></i> Acquisition or sale of business </p>
-						<p><i class="bi bi-dash-lg"></i> Family business transmission </p>
-						<p><i class="bi bi-dash-lg"></i> Fundraising and capital investment </p>
-					</div>
-
-					<div class="card">
-						<img src="./imgs/fm-law.svg" alt="" />
-						<h3 class="headings">Corporate Law</h3>
-						<p><i class="bi bi-dash-lg"></i> Joint Venture Structuring </p>
-						<p><i class="bi bi-dash-lg"></i> Corporate Regulatory Compliance </p>
-						<p><i class="bi bi-dash-lg"></i> Shareholder dispute litigation and resolution </p>
-						<p><i class="bi bi-dash-lg"></i> Pre-incorporation and general post-incorporation matters</p>
-					</div>
-
-					<div class="card">
-						<img src="./imgs/fm-law.svg" alt="" />
+					<a href="" class="card">
+						<img src="./imgs/lightbulb.png" alt="" />
 						<h3 class="headings">Intellectual Property</h3>
-						<p><i class="bi bi-dash-lg"></i> Copyright </p>
-						<p><i class="bi bi-dash-lg"></i> Intellectual Property right protection</p>
-						<p><i class="bi bi-dash-lg"></i> Trademark renewing and objection in Nigeria </p>
-						<p><i class="bi bi-dash-lg"></i> Trademark clearance search and registration in Nigeria </p>
-					</div>
+					</a>
 
-					<div class="card">
-						<img src="./imgs/fm-law.svg" alt="" />
+					<a href="" class="card">
+						<img src="./imgs/it.png" alt="" />
+						<h3 class="headings">Information Technology</h3>
+					</a>
+
+					<a href="" class="card">
+						<img src="./imgs/risk.png" alt="" />
+						<h3 class="headings">Business Mitigation & Mediation</h3>
+					</a>
+
+					<a href="" class="card">
+						<img src="./imgs/funding.webp" alt="" />
+						<h3 class="headings">Funding, Mergers & Acquisition</h3>
+					</a>
+
+					<a href="" class="card">
+						<img src="./imgs/agreement.png" alt="" />
+						<h3 class="headings">Contract</h3>
+					</a>
+
+					<a href="" class="card">
+						<img src="./imgs/growth.png" alt="" />
 						<h3 class="headings">Investing In Nigeria</h3>
-						<p><i class="bi bi-dash-lg"></i> Foreign company set up in Nigeria </p>
-						<p><i class="bi bi-dash-lg"></i> Joint Venture in Nigeria </p>
-						<p><i class="bi bi-dash-lg"></i> Business immigration </p>
-						<p><i class="bi bi-dash-lg"></i> Trade office set up </p>
-					</div>
+					</a>
+
+					<a href="" class="card">
+						<img src="./imgs/real-estate.png" alt="" />
+						<h3 class="headings">Real Estate Structuring</h3>
+					</a>
+
+					<a href="" class="card">
+						<img src="./imgs/consumer-protection.png" alt="" />
+						<h3 class="headings">Consumer Protection</h3>
+					</a>
 
 				</div>
 			</section>
@@ -173,7 +164,7 @@
 			<section>
 				<h2>
 					<small>SUCCESSFUL CASE RESULTS</small> <br />
-					Maintaining a record of success
+					<span>Maintaining a record of success</span>
 				</h2>
 				<p>
 					Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
@@ -210,7 +201,7 @@
 			<section>
 				<h2>
 					<small>OUR TEAM</small> <br />
-					Meet our team of experts
+					<span>Meet our team of experts</span>
 				</h2>
 				<div class="card-grid">
 					<div class="card">
@@ -226,15 +217,15 @@
 							<img src="./imgs/team/partner_2.jpg" alt="" />
 						</figure>
 						<h5 class="headings">Orobosa Ebowe</h5>
-						<p>Senior Partner</p>
+						<p>Senior Associate</p>
 					</div>
 
-					<div class="card" hidden>
+					<div class="card">
 						<figure>
-							<img src="./imgs/partner.png" alt="" />
+							<img src="./imgs/team/ella.jpg" alt="" />
 						</figure>
-						<h5 class="headings">Samson Range</h5>
-						<p>Partner</p>
+						<h5 class="headings">Emmanuella Okonopa</h5>
+						<p>Chief Operating Officer</p>
 					</div>
 
 					<div class="card" hidden>
@@ -252,10 +243,10 @@
 			<section>
 				<h2>
 					<small>TESTIMONIALS</small> <br />
-					See what people are saying
+					<span>See what people are saying</span>
 				</h2>
 				<div class="card-grid">
-					<div class="card">
+					<div class="card _carousel">
 						<img src="./imgs/blockquote.svg" alt="" />
 						<p>
 							Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
@@ -267,7 +258,7 @@
 							<small> CEO, Lacoste </small>
 						</h3>
 					</div>
-					<div class="card">
+					<div class="card _carousel">
 						<img src="./imgs/blockquote.svg" alt="" />
 						<p>
 							Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
@@ -282,16 +273,19 @@
 				</div>
 			</section>
 			<p class="indicators">
-				<span class="active"></span>
-				<span></span>
-				<span></span>
+				<span>
+					<input type="radio" name="c" class="carousel-check" checked /><span class="active"></span>
+				</span>
+				<span>
+					<input type="radio" name="c" class="carousel-check" value="1" /><span></span>
+				</span>
 			</p>
 		</div>
 
 		<div id="more-info" class="info-section">
 			<section>
 				<div class="card-grid">
-					<div class="card">
+					<div class="card" id="contact-info">
 						<img src="./imgs/logo.svg" alt="" />
 						<p>
 							Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
@@ -313,7 +307,7 @@
 						</div>
 					</div>
 
-					<div class="card">
+					<div class="card" id="quick-links">
 						<h3 class="headings">Quick links</h3>
 						<ul>
 							<li><a href="#intro">Home</a></li>
@@ -346,14 +340,20 @@
 		</div>
 	</main>
 
-	<footer>
-		<p>&COPY; <?php echo date("Y") ?> Metalex Legal. All Rights Reserved</p>
+	<footer id="footer">
+		<p>
+			<a style="text-decoration: none; color: #ffffff8a; font-size: 14px;" href="https://www.flaticon.com/free-icons/law" title="law icons">Law icons created by Freepik - Flaticon</a>
+		</p>
 		<p>
 			<img src="./imgs/facebook-logo.svg" alt="facebook" />
 			<img src="./imgs/instagram.svg" alt="instagram" />
 			<img src="./imgs/twitter-logo.svg" alt="twitter" />
 		</p>
+		<p style="width: 100%; text-align:center">
+			&COPY; <?php echo date("Y") ?> Metalex Legal. All Rights Reserved
+		</p>
 	</footer>
+
 	<script src="//code.tidio.co/cec3szootznfia799pjladphh8dnncae.js" async></script>
 	<!--End of Tawk.to Script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
