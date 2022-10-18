@@ -28,6 +28,11 @@ $(document).ready(function () {
 			mobile_menu.classList.toggle("visible");
 		});
 
+	$(".navlist li").click(function () {
+		$(".navlist li.active").removeClass("active");
+		$(this).addClass("active");
+	});
+
 	document.querySelector(".close-menu").addEventListener("click", function (e) {
 		mobile_menu.classList.remove("visible");
 	});
@@ -41,7 +46,7 @@ $(document).ready(function () {
 	});
 
 	// * Submit contact message
-	$("#contact_form").submit(function (e) {
+	$("#contact-form form").submit(function (e) {
 		e.preventDefault();
 		let form_data = $(this).serializeArray();
 		let check_data = form_data.filter((data) => data.value.trim() !== "");
