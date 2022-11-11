@@ -1,0 +1,15 @@
+#alert {
+	.alert {
+		padding: 1em 1.3em;
+		color: white;
+		&-success {
+			background-color: #0fb00fd6;
+		}
+		&-info {
+			background-color: #179ce3d6;
+		}
+		&-danger {
+			background-color: #eb2f2fde;
+		}
+	}
+}

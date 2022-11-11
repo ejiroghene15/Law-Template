@@ -1,0 +1,13 @@
+#alert .alert {
+  padding: 1em 1.3em;
+  color: white;
+}
+#alert .alert-success {
+  background-color: rgba(15, 176, 15, 0.8392156863);
+}
+#alert .alert-info {
+  background-color: rgba(23, 156, 227, 0.8392156863);
+}
+#alert .alert-danger {
+  background-color: rgba(235, 47, 47, 0.8705882353);
+}

@@ -2,6 +2,6 @@ RewriteEngine On
 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^publications/?$ publications.php [L]
-RewriteRule ^service/?$ service.php [L]
+RewriteRule ^publications/$ publications.php [L]
+RewriteRule ^service/$ service.php [L]
 RewriteRule ^service/(.*)/?([0-9]*) service.php?slug=$1 [L]

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Lora:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+:root {
+	--primary-color: #f77e46;
+	--primary-color-light-shade: #fef9f3;
+	--primary-font: "Lora", serif;
+	--secondary-font: "Baskervville", serif;
+	--dashboard-font: "Lato", sans-serif;
+}
+
+@mixin mq($arg) {
+	@media screen and (max-width: $arg) {
+		@content;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	margin: 0;
+	height: 100%;
+}

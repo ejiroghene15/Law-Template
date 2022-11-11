@@ -1,0 +1,44 @@
+.table {
+	width: 100%;
+	text-align: left;
+	border: 1px solid rgba(17, 36, 48, 0.07);
+	border-radius: 4px;
+
+	td,
+	th {
+		padding: 1em 0.8em 1em;
+		// white-space: ;
+	}
+
+	thead > tr {
+		background-color: #22235bd4;
+		color: white;
+	}
+
+	td .table-link {
+		text-decoration: none;
+		padding: 0.7em;
+		font-size: 13px;
+		border-radius: 4px;
+		color: white;
+		text-decoration: none;
+		margin-right: 7px;
+		display: inline-block;
+		margin: 5px auto;
+		white-space: pre;
+		&.success {
+			background-color: #0fb00fd6;
+		}
+		&.info {
+			background-color: #179ce3d6;
+		}
+		&.danger {
+			background-color: #eb2f2fde;
+		}
+	}
+
+	tbody > tr:nth-child(even) {
+		background-color: rgba(34, 35, 66, 0.62);
+		color: white;
+	}
+}

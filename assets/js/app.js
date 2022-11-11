@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	let mobile_menu = document.querySelector("#mobile-menu");
 	// * Add smooth scrolling to all links
 	$("a").on("click", function (event) {
@@ -31,10 +32,6 @@ $(document).ready(function () {
 	$(".navlist li").click(function () {
 		$(".navlist li.active").removeClass("active");
 		$(this).addClass("active");
-	});
-
-	document.querySelector(".close-menu").addEventListener("click", function (e) {
-		mobile_menu.classList.remove("visible");
 	});
 
 	$(".carousel-check").click(function () {

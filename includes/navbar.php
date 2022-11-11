@@ -32,7 +32,7 @@
 		</li>
 
 		<li>
-			<a href="">
+			<a href="publications/">
 				<span class="menu-icon">
 					<img src="./assets/imgs/icons/report.png" alt="">
 				</span>
@@ -70,7 +70,7 @@
 			<li class="active"><a href="#intro">Home</a></li>
 			<li><a href="#about-us">About us</a></li>
 			<li><a href="#area-of-practice">Services</a></li>
-			<li><a href="./publications.php">Publications</a></li>
+			<li><a href="./publications/">Publications</a></li>
 			<li><a href="#our-team">Our team</a></li>
 			<!-- <li class="btn-link primary">Contact Us</li> -->
 		</ul>

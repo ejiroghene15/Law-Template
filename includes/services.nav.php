@@ -60,7 +60,7 @@
 <header id="nav-container">
 	<nav class="navbar">
 		<section id="logo">
-			<a href="/metalex"><img src="<?php echo BASE_PATH ?>assets/imgs/logos/full_logo.png" height="40" alt="" /></a>
+			<a href="/"><img src="<?php echo BASE_PATH ?>assets/imgs/logos/full_logo.png" height="40" alt="" /></a>
 		</section>
 		<ul class="navlist">
 			<li><a href="<?php echo BASE_PATH ?>">Home</a></li>

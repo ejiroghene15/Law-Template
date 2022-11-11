@@ -20,13 +20,13 @@ if ($service) :
 			<main id="services-page">
 				<aside>
 					<article>
-						<img src="<?php echo BASE_PATH ?>assets/imgs/icons/<?php echo $service->logo ?>" alt="<?php echo $service->logo ?>" height="70" />
+						<img src="<?php echo BASE_PATH ?>assets/imgs/icons/<?php echo $service->logo ?>" alt="<?php echo $service->logo ?>" height="50" />
 						<h3 class="headings"><?php echo $service->display_name ?></h3>
 					</article>
 				</aside>
 				<article>
-					<h1>Our Services</h1>
-					<?php echo nl2br($service->full_description ?? '') ?>
+					<h1><span>Our</span> Services</h1>
+					<?php echo htmlspecialchars_decode($service->full_description) ?>
 				</article>
 			</main>
 

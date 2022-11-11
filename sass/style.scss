@@ -1,26 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Lora:ital@0;1&display=swap");
-:root {
-	--primary-color: #f77e46;
-	--primary-font: "Lora", serif;
-	--secondary-font: "Baskervville", serif;
-}
-
-@mixin mq($arg) {
-	@media screen and (max-width: $arg) {
-		@content;
-	}
-}
-
-html {
-	height: 100%;
-}
-
-body {
-	background-color: #ffffff;
-	margin: 0;
-	overflow-x: hidden;
-	height: 100%;
-}
+@import "./default.mixin";
 
 .btn-link {
 	border-radius: 4px;
@@ -153,10 +131,13 @@ body {
 #nav-container {
 	position: sticky;
 	top: 0px;
-	padding: 3vh 5vw;
+	padding: 3vh 5vw 3vh 3vw;
+	@include mq(560px) {
+		padding-left: 0;
+	}
 	background-color: #fff;
 	z-index: 10;
-	box-shadow: 0 3px 5px #dfd5ca6e;
+	box-shadow: 0 3px 5px #fef9f3;
 	.navbar {
 		display: flex;
 		align-items: center;
@@ -167,6 +148,11 @@ body {
 				margin-left: auto;
 				cursor: pointer;
 			}
+		}
+
+		#logo img {
+			transform: scale(0.8);
+			object-position: -10px 0;
 		}
 
 		.navlist {
@@ -237,6 +223,7 @@ body {
 #main-content {
 	padding: 7vh 5vw;
 	position: relative;
+	overflow: hidden;
 	.headings {
 		font-family: "Baskervville", serif;
 	}
@@ -298,7 +285,7 @@ body {
 				@include mq(768px) {
 					flex-basis: 100%;
 					.intro_img {
-						width: 70vw;
+						width: 100%;
 						margin: auto;
 						display: block;
 					}
@@ -314,30 +301,41 @@ body {
 
 		&#intro {
 			margin-top: 0;
-			padding: 4em 0 2em;
+			padding: 4em 5vw 2em;
+			margin-right: -5vw;
+			margin-left: -5vw;
 			&::before,
 			&::after {
 				position: absolute;
-				left: -100px;
-				right: -100px;
+				left: 0px;
+				right: 0px;
 				top: -100px;
 				height: 100%;
 				content: "";
+				width: 100%;
 				background-color: #fef9f3;
 				z-index: -1;
+				overflow: hidden;
 			}
 
 			&::after {
 				top: 50px !important;
 			}
+
+			@include mq(768px) {
+				& > aside {
+					display: none !important;
+				}
+			}
 		}
 
 		&#about-us {
 			flex-direction: row-reverse;
-			gap: 10vw;
+			gap: 5vw;
+			align-items: center;
 
 			section {
-				flex-basis: 40%;
+				flex-basis: 50%;
 				top: 0px;
 				align-self: flex-start;
 				h2 {
@@ -493,7 +491,6 @@ body {
 		&#our-team {
 			display: block;
 			section {
-				width: 100%;
 				top: 0px;
 				h2 {
 					font-weight: 100;
@@ -503,22 +500,40 @@ body {
 						font-size: 10px;
 					}
 				}
+				#wrapper {
+					@media screen and (min-width: 600px) {
+						width: calc((280px * 2) + 1.3em);
+						margin-left: auto;
+						margin-right: auto;
+					}
+					width: 280px;
+					margin-left: auto;
+					margin-right: auto;
+				}
 				.card-grid {
 					margin-top: 2.5em;
-					display: grid;
-					grid-template-columns: repeat(4, minmax(10px, 300px));
-					justify-content: center;
-					overflow-x: auto;
 					gap: 1em;
+					overflow-x: scroll;
+					scroll-snap-type: x mandatory;
+					scroll-behavior: smooth;
+					-webkit-overflow-scrolling: touch;
+					scrollbar-width: none;
+					display: grid;
+					grid-auto-flow: column;
+
+					&::-webkit-scrollbar {
+						display: none;
+					}
 					.card {
 						margin: auto;
 						text-align: center;
-						width: 100%;
+						width: 280px;
+						scroll-snap-align: start;
 						& > figure {
 							height: 370px;
 							overflow: hidden;
 							margin: 0;
-							border-radius: 25px;
+							border-radius: 15px;
 							img {
 								width: 100%;
 								height: inherit;
@@ -539,14 +554,10 @@ body {
 					}
 
 					@include mq(1000px) {
-						grid-template-columns: repeat(2, minmax(10px, 1fr));
+						// grid-template-columns: repeat(2, minmax(10px, 1fr));
 						.card > figure {
 							height: 370px;
 						}
-					}
-
-					@include mq(480px) {
-						grid-template-columns: 1fr;
 					}
 				}
 			}
@@ -567,7 +578,7 @@ body {
 				}
 				.card-grid {
 					display: grid;
-					grid-template-columns: repeat(2, 100%);
+					grid-template-columns: repeat(7, 100%);
 					overflow: hidden;
 					width: 70%;
 					margin: 2.5em auto 0;
@@ -578,12 +589,12 @@ body {
 					.card {
 						background-color: #fef9f3;
 						border-radius: 30px;
-						padding: 3em;
+						padding: 1em 2em 2em;
 						position: relative;
 						left: 0;
 						p {
 							padding-top: 8px;
-							font-size: 16px;
+							font-size: 15px;
 							color: #333333;
 						}
 						h3 {
@@ -655,20 +666,17 @@ body {
 						}
 
 						p {
-							font-size: 16px;
+							font-size: 14px;
 							color: #3333339e;
 							line-height: 30px;
-							padding: 20px 0px;
+							padding: 1em 0px;
 						}
 
 						.contact-info {
 							p {
 								padding: 0.1em 0em;
-								white-space: nowrap;
-								img {
-									vertical-align: middle;
-									margin-right: 8px;
-								}
+								display: flex;
+								gap: 1em;
 							}
 						}
 
@@ -761,7 +769,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: #fef9f3;
-	 a {
+	a {
 		text-decoration: none !important;
 	}
 
@@ -826,12 +834,19 @@ body {
 				margin-top: 5px;
 			}
 		}
+		@include mq(620px) {
+			padding: 2em 1em 1em;
+			> article {
+				h3 {
+					font-size: 1.5em;
+				}
+			}
+		}
 	}
 
 	> article {
 		position: relative;
 		font-size: 14px;
-		line-height: 2.2em;
 		padding: 1em 2.5em;
 		font-family: var(--primary-font);
 		&::before {
@@ -846,24 +861,50 @@ body {
 			font-family: var(--secondary-font);
 			font-weight: 500;
 			font-size: 2.5em;
-			margin-top: 15px;
-			position: relative;
-			&::after {
-				height: 4px;
-				width: 40px;
-				content: "";
-				position: absolute;
-				background-color: #f77e46;
-				bottom: -10px;
-				left: 5px;
+			margin: 15px 0;
+			width: max-content;
+			line-height: 2.2em;
+			span {
+				color: var(--primary-color);
+			}
+		}
+		ul {
+			// padding: 0;
+			list-style: none;
+			padding-inline-start: 1em;
+			li {
+				position: relative;
+				margin-bottom: 1em;
+				font-size: 14px;
+				padding-inline-start: 1em;
+				&::before {
+					background: url("../imgs/icons/tick.png") no-repeat;
+					content: " ";
+					height: 30px;
+					width: 20px;
+					display: block;
+					position: absolute;
+					left: -1em;
+					background-position: 100%;
+					background-size: 100%;
+					// top: 7px;
+				}
+			}
+		}
+		p,
+		li {
+			line-height: 2.2em;
+		}
+		@include mq(620px) {
+			padding: 1.5em;
+			h1 {
+				font-size: 2em;
+				margin: 15px auto 15px auto;
 			}
 		}
 	}
 
 	@include mq(820px) {
 		grid-template-columns: auto;
-		> aside {
-		}
 	}
 }
- 

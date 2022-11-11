@@ -13,7 +13,7 @@ $services = $services_query->fetchAll(PDO::FETCH_OBJ);
 <body>
 	<section id="grid-page-container">
 		<!-- // * Navbar  -->
-		<?php include_once "./includes/services.nav.php" ?>
+		<?php include_once "./includes/navbar.php" ?>
 
 		<!-- // * Main Body` -->
 		<main id="main-content">
@@ -39,7 +39,7 @@ $services = $services_query->fetchAll(PDO::FETCH_OBJ);
 						<span>Why Metalex Legal Is Right For You</span>
 					</h2>
 					<p>
-						Metalex Legal provides expert legal advice in technology and corporate matters for individuals, startups, existing SMEs in the process scaling and big corporations.
+						Metalex Legal provides expert legal advice in technology and corporate matters for individuals, startups, existing SMEs in the process of scaling and big corporations.
 					</p>
 					<p>
 						We work at an international level and offer full legal support to companies setting up in Nigeria.
@@ -75,10 +75,7 @@ $services = $services_query->fetchAll(PDO::FETCH_OBJ);
 						<span>Maintaining a record of success</span>
 					</h2>
 					<p>
-						Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-						pariatur sit qui ut. Laborum est ad aliquip anim qui. Nisi magna
-						exercitation adipisicing reprehenderit exercitation sit veniam
-						deserunt
+						At Metalex Legal, we work at an international level and offer full legal support to our clients within and outside Nigeria. In unifying Human and Artificial Intelligence, we have a team of experts and have fully adopted technology in our seamless service delivery across borders.
 					</p>
 					<a href="#more-info">Send us a Message</a>
 				</section>
@@ -111,45 +108,73 @@ $services = $services_query->fetchAll(PDO::FETCH_OBJ);
 						<small>OUR TEAM</small> <br />
 						<span>Meet our team of Experts</span>
 					</h2>
-					<div class="card-grid">
-						<div class="card">
-							<figure>
-								<img src="./assets/imgs/team/akpos.jpg" alt="" />
-							</figure>
-							<h5 class="headings">Kohwo Akpofure</h5>
-							<p>Founder</p>
-						</div>
+					<div id="wrapper">
+						<div class="card-grid">
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/akpos.jpg" alt="" />
+								</figure>
+								<h5 class="headings">Kohwo Akpofure</h5>
+								<p>Founder</p>
+							</div>
 
-						<div class="card">
-							<figure>
-								<img src="./assets/imgs/team/partner_2.jpg" alt="" />
-							</figure>
-							<h5 class="headings">Orobosa Ebowe</h5>
-							<p>Senior Associate</p>
-						</div>
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/ella.jpg" alt="" />
+								</figure>
+								<h5 class="headings">Emmanuella Okonopa</h5>
+								<p>Chief Operating Officer</p>
+							</div>
 
-						<div class="card">
-							<figure>
-								<img src="./assets/imgs/team/felliot.jpg" alt="" />
-							</figure>
-							<h5 class="headings">Frank Ogheneruemu</h5>
-							<p>Associate</p>
-						</div>
+							<div class="card" hidden>
+								<figure>
+									<img src="./assets/imgs/team/marcos.jpeg" alt="" />
+								</figure>
+								<h5 class="headings">Marcos Obijeko</h5>
+								<p>Senior Associate</p>
+							</div>
 
-						<div class="card">
-							<figure>
-								<img src="./assets/imgs/team/ella.jpg" alt="" />
-							</figure>
-							<h5 class="headings">Emmanuella Okonopa</h5>
-							<p>Chief Operating Officer</p>
-						</div>
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/partner_2.jpg" alt="" />
+								</figure>
+								<h5 class="headings">Orobosa Ebowe</h5>
+								<p>Associate</p>
+							</div>
 
-						<div class="card" hidden>
-							<figure>
-								<img src="./imgs/secretary.png" alt="" />
-							</figure>
-							<h5 class="headings">Keri Powell</h5>
-							<p>Secretary</p>
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/best.jpeg" alt="" />
+								</figure>
+								<h5 class="headings">Best Ogbewe</h5>
+								<p>Associate</p>
+							</div>
+
+
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/felliot.jpg" alt="" />
+								</figure>
+								<h5 class="headings">Frank Ogheneruemu</h5>
+								<p>Associate</p>
+							</div>
+
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/peace.jpg" alt="" />
+								</figure>
+								<h5 class="headings">Peace Odunfa</h5>
+								<p>Client Relationship Manager</p>
+							</div>
+
+							<div class="card">
+								<figure>
+									<img src="./assets/imgs/team/intern.jpg" alt="" />
+								</figure>
+								<h5 class="headings">Jiro Ominimini</h5>
+								<p>Intern</p>
+							</div>
+
 						</div>
 					</div>
 				</section>
@@ -162,39 +187,18 @@ $services = $services_query->fetchAll(PDO::FETCH_OBJ);
 						<span>See what people are saying</span>
 					</h2>
 					<div class="card-grid">
-						<div class="card _carousel">
-							<img src="./imgs/blockquote.svg" alt="" />
-							<p>
-								Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-								pariatur sit qui ut. Laborum est ad aliquip anim qui.
-							</p>
-							<h3 class="headings">
-								Derrick Johnson
-								<br />
-								<small> CEO, Lacoste </small>
-							</h3>
-						</div>
-						<div class="card _carousel">
-							<img src="./imgs/blockquote.svg" alt="" />
-							<p>
-								Aliqua culpa cillum amet elit dolore quis sint labore ea eiusmod
-								pariatur sit qui ut. Laborum est ad aliquip anim qui.
-							</p>
-							<h3 class="headings">
-								Roseline Moore
-								<br />
-								<small> Founder, Daisies </small>
-							</h3>
-						</div>
+						<?php include "./includes/testimonials.php" ?>
 					</div>
 				</section>
 				<p class="indicators">
 					<span>
 						<input type="radio" name="c" class="carousel-check" checked /><span class="active"></span>
 					</span>
-					<span>
-						<input type="radio" name="c" class="carousel-check" value="1" /><span></span>
-					</span>
+					<?php for ($ind = 1; $ind < count($testimonials); $ind++) : ?>
+						<span>
+							<input type="radio" name="c" class="carousel-check" value="<?php echo $ind ?>" /><span></span>
+						</span>
+					<?php endfor; ?>
 				</p>
 			</div>
 
@@ -210,7 +214,7 @@ $services = $services_query->fetchAll(PDO::FETCH_OBJ);
 							<div class="contact-info">
 								<p>
 									<img src="./imgs/location-marker.svg" alt="location" />
-									<span>358, Beverly View, New York</span>
+									<span>Ukori Law House, 5 Emomejere Street, Ughelli, Delta State.</span>
 								</p>
 								<p>
 									<img src="./imgs/phone-receiver.svg" alt="phone" />

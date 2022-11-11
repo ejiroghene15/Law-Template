@@ -1,11 +1,11 @@
 <?php
 require_once dirname(__DIR__) . "/conn.php";
-require_once dirname(__DIR__) . "/functions/cleanup.php";
+require_once dirname(__DIR__) . "/includes/functions.php";
 
 //? Sanitize the data sent in
-$name = sanitizeData($_POST["name"]);
-$email = sanitizeData($_POST["email"]);
-$message = sanitizeData($_POST["message"]);
+$name = sanitizeData("name");
+$email = sanitizeData("email");
+$message = sanitizeData("message");
 
 if (!!$name && !!$email && !!$message) {
 	//? Check if the email address is valid

@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:wght@200;400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  height: 100%;
+  background-color: #f77e46;
+}
+
+.aggr__container {
+  height: 100%;
+  padding: 0.8em;
+}
+@media screen and (max-width: 768px) {
+  .aggr__container {
+    padding: 0;
+  }
+}
+
+main {
+  padding: 0 5vw;
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: 1fr;
+  background: #ffffff;
+}
+
+.content {
+  max-width: 100ch;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+.aggr__nav {
+  flex-basis: 20vw;
+  align-self: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .aggr__nav {
+    flex-basis: 0;
+  }
+}
+.aggr__nav .menu_container {
+  position: relative;
+}
+.aggr__nav .menu_container #mobile-trigger {
+  display: none;
+  color: #0f1f2f;
+}
+@media screen and (max-width: 768px) {
+  .aggr__nav .menu_container #mobile-trigger {
+    display: block;
+    text-align: end;
+  }
+}
+.aggr__nav .menu_container #mobile-trigger i.bx {
+  font-size: 1.8em;
+  vertical-align: middle;
+}
+.aggr__nav .menu_container input[data-target=mobile] {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  cursor: pointer;
+  opacity: 0 !important;
+}
+.aggr__nav .menu_container input[data-target=mobile]:checked ~ ul {
+  display: block;
+}
+.aggr__nav .menu_container ul {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .aggr__nav .menu_container ul {
+    display: none;
+    text-align: end;
+    border-right: 2px solid rgba(121, 85, 72, 0.1411764706);
+    padding-right: 0.7em;
+  }
+}
+.aggr__nav .menu_container ul li {
+  padding: 0.5em 0.2em;
+  font-size: 13px;
+}
+.aggr__nav .menu_container ul li a {
+  color: rgba(47, 7, 7, 0.4705882353);
+  text-decoration: none;
+}
+.aggr__nav .menu_container ul li.active a {
+  color: rgba(47, 7, 7, 0.831372549);
+  font-weight: bold;
+}
+
+.aggr__main_content {
+  padding: 2em;
+  flex: 1 1 0%;
+}
+@media screen and (max-width: 768px) {
+  .aggr__main_content {
+    padding: 0;
+  }
+}
+.aggr__main_content .__heading {
+  font-weight: 400;
+  font-size: 1.8em;
+  color: #f77e46;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.5em;
+}
+.aggr__main_content .__about {
+  line-height: 1.8em;
+  font-size: 1em;
+}
+.aggr__main_content .__link {
+  text-decoration: none;
+  color: rgba(247, 126, 70, 0.8);
+}
+.aggr__main_content .__articles {
+  margin-top: 10vh;
+}
+.aggr__main_content .__articles > article {
+  padding: 1em;
+  box-shadow: -3px 2px 6px 0px rgba(222, 203, 203, 0.49);
+  margin-bottom: 8vh;
+}
+.aggr__main_content .__articles > article .__title {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #0f1f2f;
+  font-family: "Libre Baskerville", serif;
+}
+.aggr__main_content .__articles > article p {
+  font-size: 13px !important;
+}
+.aggr__main_content .__articles > article p .__site {
+  color: #614339;
+}
+.aggr__main_content .__articles > article p .__date_posted {
+  display: inline-block;
+  padding: 0 2px;
+}
+.aggr__main_content .__articles > article p.labels {
+  margin-bottom: 0;
+  display: flex;
+}
+.aggr__main_content .__articles > article p.labels a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.aggr__main_content .__articles > article p.labels a i.bx {
+  color: rgba(136, 119, 153, 0.3333333333);
+  font-size: 18px;
+  vertical-align: middle;
+}
+.aggr__main_content .__articles > article p.labels a > .title {
+  margin-left: 2px;
+}
+.aggr__main_content .__articles > article p.labels a.category {
+  color: #f77e46;
+  display: none;
+}
+.aggr__main_content .__articles > article p.labels a.vote {
+  color: #4caf50;
+}
+.aggr__main_content .__more {
+  background-color: #f77e46;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  padding: 1.2em 2.5vw;
+  margin-bottom: 3vh;
+  font-size: 15px;
+  color: #ffffff;
+}
+.aggr__main_content .__more:hover {
+  background-color: transparent;
+  border: 2px solid #f77e46;
+  color: #f77e46;
+}
