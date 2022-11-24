@@ -33,6 +33,8 @@ if ($service) :
 			<!-- // * Footer  -->
 			<?php include_once "./includes/footer.php" ?>
 		</section>
+		<!-- // * Scripts  -->
+		<?php include_once "./includes/scripts.php" ?>
 	</body>
 
 	</html>

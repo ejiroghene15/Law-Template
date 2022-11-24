@@ -32,31 +32,44 @@ function addCategory()
 {
 	global $db;
 	$category = sanitizeData("category_name");
+	$slug = strtolower(str_replace(" ", "-", $category));
 	$description = sanitizeData("description");
 	$active = sanitizeData("make_active");
 
-	$query = $db->prepare("INSERT INTO `publication_category` (`name`, `description`, `active`) VALUES (?, ?, ?)");
-	if ($query->execute([$category, $description, $active])) return ["status" => 1, "message" => "Category <q>$category</q> Added"];
+	$query = $db->prepare("INSERT INTO `publication_category` (`name`, `slug`, `description`, `active`) VALUES (?, ?, ?, ?)");
+	if ($query->execute([$category, $slug, $description, $active])) return ["status" => 1, "message" => "Category <q>$category</q> Added"];
 }
 
-function getPublications()
+function getPublications($offset = null)
 {
 	global $db;
-	return $db->query("SELECT publications.*, publication_category.name AS category FROM publications JOIN publication_category ON publications.category = publication_category.id ORDER BY publications.time DESC");
+	$sql = "SELECT publications.*, publication_category.name AS category FROM publications JOIN publication_category ON publications.category = publication_category.id ORDER BY publications.time DESC";
+	if (isset($offset)) {
+		$sql .= " LIMIT 5 OFFSET $offset";
+	}
+	return $db->query($sql)->fetchAll(PDO::FETCH_OBJ);
+}
+
+function getRandomArticle($except)
+{
+	global $db;
+	return $db->query("SELECT publications.*, publication_category.name AS category FROM publications JOIN publication_category ON publications.category = publication_category.id WHERE publications.id <> $except  ORDER BY RAND() LIMIT 3")->fetchAll(PDO::FETCH_OBJ);
 }
 
 function addPublication()
 {
 	global $db;
 	$title = sanitizeData("title");
+	$slug = strtolower(str_replace(" ", "-", $title));
 	$category = sanitizeData("category");
 	$body = $_POST['body'];
 	$time = time();
+	$thumbnail_id = uniqid("thumbnail_");
 	$author = "Admin";
 
-	$query = $db->prepare("INSERT INTO `publications` (`title`, `body`, `category`, `time`, `posted_by`) VALUES (?, ?, ?, ?, ?)");
+	$query = $db->prepare("INSERT INTO `publications` (`title`, `slug`, `body`, `category`, `thumbnail_id`, `time`, `posted_by`) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-	if ($query->execute([$title, $body, $category, $time, $author])) return ["status" => 1, "message" => "New Publication <q>$title</q> Added"];
+	if ($query->execute([$title, $slug, $body, $category, $thumbnail_id, $time, $author])) return ["status" => 1, "message" => "New Publication <q>$title</q> Added"];
 }
 
 function editPublication()
@@ -72,13 +85,24 @@ function updatePublication()
 	global $db;
 	$publication_id = sanitizeData("publication_id");
 	$title = sanitizeData("title");
+	$slug = strtolower(str_replace(" ", "-", $title));
 	$category = sanitizeData("category");
 	$body = $_POST['body'];
 	// $author = "Admin";
 
-	$query = $db->prepare("UPDATE `publications` SET `title` = ?, `category` = ?, `body` = ? WHERE  id = ?");
+	$query = $db->prepare("UPDATE `publications` SET `title` = ?, `slug` = ?, `category` = ?, `body` = ? WHERE  `id` = ?");
 
-	if ($query->execute([$title, $category, $body, $publication_id])) return ["status" => 1, "message" => "Publication <q>$title</q> has been updated"];
+	if ($query->execute([$title, $slug, $category, $body, $publication_id])) return ["status" => 1, "message" => "Publication <q>$title</q> has been updated"];
+}
+
+function updatePublicationThumbnail($thumbnail)
+{
+	global $db;
+	$publication_id = sanitizeData("publication_id");
+	$thumbnail_id = sanitizeData("thumbnail_id");
+	$query = $db->prepare("UPDATE `publications` SET `image` = ? WHERE  `id` = ? AND `thumbnail_id` = ?");
+
+	if ($query->execute([$thumbnail, $publication_id, $thumbnail_id])) return ["status" => 1, "message" => "Thumbnail Updated"];
 }
 
 function deletePublication()

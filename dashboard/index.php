@@ -1,4 +1,5 @@
 <?php
+
 require "../conn.php";
 $page_title = "Dashboard";
 $allowed_pages = ['profile', 'publications', 'categories', 'services'];
@@ -22,6 +23,7 @@ include_once "./query_actions.php";
 	<script src="https://cdn.tiny.cloud/1/6xw6fzwqei9pwuwv8q3ksfk8elhwe85tcg8i1lvhnbi30qix/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+	<link rel="stylesheet" href="<?php echo BASE_PATH ?>assets/css/dropify.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_PATH ?>assets/css/dashboard.css">
 	<link rel="shortcut icon" href="<?php echo BASE_PATH ?>assets/imgs/logos/lg.png" type="image/x-icon">
 </head>
@@ -98,8 +100,11 @@ include_once "./query_actions.php";
 	</section>
 
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-	<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<script src="<?php echo BASE_PATH ?>assets/js/dropify.js"></script>
 	<script>
+		if ($('.dropify').length) {
+			$('.dropify').dropify();
+		}
 		tinymce.init({
 			menubar: false,
 			selector: '#editor',

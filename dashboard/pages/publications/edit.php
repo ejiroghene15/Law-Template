@@ -1,18 +1,31 @@
 <?php
 $publication_id = sanitizeData("publication_id");
 $publication = editPublication();
+
 if (!$publication) :
 	$status = 3;
 	$message = "Publication not found";
 	return;
 endif;
-
 ?>
 
 <header id="header">
 	<h3>Edit Publication</h3>
 	<a href="./publications">My Publications</a>
 </header>
+
+<form method="post" enctype="multipart/form-data" style="width: 320px; margin-inline: auto;">
+	<input type="hidden" name="_csrf" value="<?php echo $_SESSION['_csrf'] ?>">
+	<input type="hidden" name="publication_id" value="<?php echo $publication_id ?>">
+	<input type="hidden" name="thumbnail_id" value="<?php echo $publication->thumbnail_id ?>">
+	<fieldset>
+		<input type="file" name="thumbnail" class="dropify" data-default-file="<?php echo $publication->image ?? BASE_PATH . "assets/imgs/logos/full_logo.png" ?>" />
+	</fieldset>
+
+	<fieldset style="text-align: center;">
+		<button name="update_thumbnail" class="success" type="submit">Update Thumbnail</button>
+	</fieldset>
+</form>
 
 <form method="post">
 	<input type="hidden" name="_csrf" value="<?php echo $_SESSION['_csrf'] ?>">
@@ -23,7 +36,7 @@ endif;
 	</fieldset>
 
 	<fieldset>
-		<label for="">Choose Category</label>
+		<la for="">Choose Category</la bel>
 		<select name="category">
 			<?php
 			$query = getCategories();

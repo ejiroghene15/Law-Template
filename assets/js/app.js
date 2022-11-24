@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 	let mobile_menu = document.querySelector("#mobile-menu");
 	// * Add smooth scrolling to all links
 	$("a").on("click", function (event) {
@@ -23,11 +22,13 @@ $(document).ready(function () {
 	});
 
 	// * Toggle the mobile menu icon
-	document
-		.querySelector(".mobile-menu-hamburger")
-		.addEventListener("click", function () {
-			mobile_menu.classList.toggle("visible");
-		});
+	if (document.querySelector(".mobile-menu-hamburger")) {
+		document
+			.querySelector(".mobile-menu-hamburger")
+			.addEventListener("click", function () {
+				mobile_menu.classList.toggle("visible");
+			});
+	}
 
 	$(".navlist li").click(function () {
 		$(".navlist li.active").removeClass("active");
@@ -86,5 +87,26 @@ $(document).ready(function () {
 				});
 			}, 3000);
 		});
+	});
+
+	// * load more
+	$("#load_more").click(function () {
+		let btn = $(this);
+		btn.text("Loading...");
+		let offset = $("._article_list > article").length;
+		let type = $(this).data().for;
+		let category_id = $(this).val();
+		$.get(
+			"../ajax/load_more.php",
+			{
+				type,
+				offset,
+				category_id,
+			},
+			function (res) {
+				$("._article_list").append(res);
+				btn.text("Discover More");
+			}
+		);
 	});
 });
